@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaptopGenius - Smart Laptop Price Predictor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>LaptopGenius</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#predictor">Predictor</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge">AI-Powered Technology</span>
+                <h1>Find Your Perfect<br><span class="highlight">Laptop Price</span></h1>
+                <p>Get instant, accurate laptop price predictions powered by advanced machine learning. 
+                   Make informed decisions with LaptopGenius - your trusted electronics marketplace companion.</p>
+                <div class="hero-buttons">
+                    <a href="#predictor" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Start Predicting
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> Learn More
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p>Laptops Analyzed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <p>Accuracy Rate</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Brands Covered</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="laptop-illustration">
+                    <div class="laptop-screen">
+                        <div class="screen-content">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Price Analysis</span>
+                        </div>
+                    </div>
+                    <div class="laptop-base"></div>
+                </div>
+                <div class="floating-cards">
+                    <div class="float-card card-1">
+                        <i class="fas fa-microchip"></i>
+                        <span>Intel i7</span>
+                    </div>
+                    <div class="float-card card-2">
+                        <i class="fas fa-memory"></i>
+                        <span>16GB RAM</span>
+                    </div>
+                    <div class="float-card card-3">
+                        <i class="fas fa-hdd"></i>
+                        <span>512GB SSD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 50L48 45.7C96 41.3 192 32.7 288 30.3C384 28 480 32 576 39.2C672 46.3 768 56.7 864 56.7C960 56.7 1056 46.3 1152 43.8C1248 41.3 1344 46.7 1392 49.3L1440 52V100H1392C1344 100 1248 100 1152 100C1056 100 960 100 864 100C768 100 672 100 576 100C480 100 384 100 288 100C192 100 96 100 48 100H0V50Z" fill="#f8fafc"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Predictor Section -->
+    <section id="predictor" class="predictor-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Price Predictor</span>
+                <h2>Configure Your Dream Laptop</h2>
+                <p>Select the specifications below and get an instant price estimate</p>
+            </div>
+
+            <div class="predictor-container">
+                <div class="predictor-form" id="predictorForm">
+                    <!-- Brand & Type Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">
+                                <i class="fas fa-building"></i> Brand
+                            </label>
+                            <select id="company" required>
+                                <option value="">Select Brand</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="laptopType">
+                                <i class="fas fa-laptop"></i> Laptop Type
+                            </label>
+                            <select id="laptopType" required>
+                                <option value="">Select Type</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Display Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="screenSize">
+                                <i class="fas fa-tv"></i> Screen Size (inches)
+                            </label>
+                            <select id="screenSize" required>
+                                <option value="">Select Screen Size</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="resolution">
+                                <i class="fas fa-expand"></i> Resolution
+                            </label>
+                            <select id="resolution" required>
+                                <option value="">Select Resolution</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Display Features Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="touchscreen">
+                                <i class="fas fa-hand-pointer"></i> Touchscreen
+                            </label>
+                            <select id="touchscreen" required>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ips">
+                                <i class="fas fa-desktop"></i> IPS Display
+                            </label>
+                            <select id="ips" required>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Performance Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cpu">
+                                <i class="fas fa-microchip"></i> Processor (CPU)
+                            </label>
+                            <select id="cpu" required>
+                                <option value="">Select CPU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="gpu">
+                                <i class="fas fa-video"></i> Graphics (GPU)
+                            </label>
+                            <select id="gpu" required>
+                                <option value="">Select GPU</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Memory Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ram">
+                                <i class="fas fa-memory"></i> RAM (GB)
+                            </label>
+                            <select id="ram" required>
+                                <option value="">Select RAM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="os">
+                                <i class="fas fa-windows"></i> Operating System
+                            </label>
+                            <select id="os" required>
+                                <option value="">Select OS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Storage Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hdd">
+                                <i class="fas fa-hdd"></i> HDD Storage (GB)
+                            </label>
+                            <select id="hdd" required>
+                                <option value="">Select HDD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ssd">
+                                <i class="fas fa-bolt"></i> SSD Storage (GB)
+                            </label>
+                            <select id="ssd" required>
+                                <option value="">Select SSD</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Weight Row -->
+                    <div class="form-row single">
+                        <div class="form-group full-width">
+                            <label for="weight">
+                                <i class="fas fa-weight-hanging"></i> Weight (kg)
+                            </label>
+                            <select id="weight" required>
+                                <option value="">Select Weight</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-predict" id="predictBtn">
+                            <i class="fas fa-magic"></i> Predict Price
+                        </button>
+                        <button type="button" class="btn btn-reset" id="resetBtn">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result Panel -->
+                <div class="result-panel" id="resultPanel">
+                    <div class="result-placeholder" id="resultPlaceholder">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Configure Your Laptop</h3>
+                        <p>Select specifications and click "Predict Price" to see the estimated cost</p>
+                    </div>
+                    
+                    <div class="result-content hidden" id="resultContent">
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <span class="result-label">Predicted Price</span>
+                        </div>
+                        <div class="price-display">
+                            <span class="currency">₹</span>
+                            <span class="price-value" id="priceValue">0</span>
+                        </div>
+                        <div class="result-details" id="resultDetails">
+                            <!-- Configuration details will be inserted here -->
+                        </div>
+                        <div class="result-footer">
+                            <p><i class="fas fa-info-circle"></i> Price based on current market trends</p>
+                        </div>
+                    </div>
+
+                    <div class="loading-state hidden" id="loadingState">
+                        <div class="loader"></div>
+                        <p>Analyzing configuration...</p>
+                    </div>
+
+                    <div class="error-state hidden" id="errorState">
+                        <div class="error-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Oops! Something went wrong</h3>
+                        <p id="errorMessage">Please try again</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2>Powerful Features</h2>
+                <p>Discover what makes LaptopGenius the best choice for laptop price predictions</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced machine learning algorithms trained on thousands of laptop configurations for accurate predictions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Results</h3>
+                    <p>Get price predictions in milliseconds. No waiting, no delays - just instant, accurate estimates.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Comprehensive Data</h3>
+                    <p>Our model is trained on extensive market data covering all major brands and specifications.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Reliable Accuracy</h3>
+                    <p>Industry-leading prediction accuracy backed by rigorous testing and validation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Access LaptopGenius from any device - desktop, tablet, or mobile phone.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Real-time Analysis</h3>
+                    <p>Get up-to-date predictions reflecting current market conditions and trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-badge">About Us</span>
+                    <h2>Your Trusted Electronics Partner</h2>
+                    <p>LaptopGenius is part of the leading electronics marketplace ecosystem, helping millions of customers make informed purchasing decisions every day.</p>
+                    <p>Our AI-powered price prediction tool uses cutting-edge machine learning technology to analyze laptop configurations and provide accurate price estimates based on real market data.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trusted by thousands of users</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Data-driven predictions</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Continuously updated models</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Part of LaptopGenius Electronics</h3>
+                        <p>Your one-stop destination for all electronics needs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>LaptopGenius</span>
+                    </div>
+                    <p>Smart laptop price predictions powered by AI. Make informed decisions with accurate market insights.</p>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#predictor">Predictor</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LaptopGenius Electronics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
