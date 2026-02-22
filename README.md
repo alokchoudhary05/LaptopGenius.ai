@@ -5,11 +5,15 @@
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
   <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Deployed-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" />
 </p>
 
 <p align="center">
   <b>An end-to-end Machine Learning project that predicts laptop prices based on hardware specifications using ensemble learning techniques.</b>
+</p>
+
+<p align="center">
+  🌐 <a href="https://laptopgenius-ai.onrender.com/" target="_blank"><b>Live Demo: https://laptopgenius-ai.onrender.com</b></a>
 </p>
 
 ---
@@ -95,7 +99,9 @@ In the dynamic laptop market, prices vary significantly based on specifications 
 ├── 📦 Configuration
 │   ├── requirements.txt              # Python dependencies
 │   ├── Procfile                      # Render deployment
-│   └── runtime.txt                   # Python version
+│   └── .python-version               # Python version (3.11)
+│
+├── 📸 static/                        # Screenshots & Assets
 │
 └── 📄 README.md                      # Project documentation
 ```
@@ -151,17 +157,20 @@ In the dynamic laptop market, prices vary significantly based on specifications 
 
 ---
 
-## 📈 Model Performance
 
-| Metric | Score |
-|--------|-------|
-| R² Score | ~0.88 |
-| MAE | ~₹15,000 |
-| RMSE | ~₹21,000 |
+## � Application Screenshots
+
+<p align="center">
+  <img src="static/image1.png" alt="LaptopGenius Homepage" width="100%" />
+</p>
+
+<p align="center">
+  <img src="static/image2.png" alt="LaptopGenius Price Prediction" width="100%" />
+</p>
 
 ---
 
-## 🚀 Getting Started
+## �🚀 Getting Started
 
 ### Prerequisites
 
@@ -173,8 +182,8 @@ In the dynamic laptop market, prices vary significantly based on specifications 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/laptop-price-predictor.git
-   cd laptop-price-predictor
+   git clone https://github.com/alokchoudhary05/LaptopGenius.ai.git
+   cd LaptopGenius.ai
    ```
 
 2. **Create and activate virtual environment**
@@ -263,18 +272,18 @@ curl -X POST "http://localhost:8000/api/predict" \
 
 ---
 
-## 🔮 Future Enhancements
+<!-- ## 🔮 Future Enhancements
 
 - [ ] Add model explainability with SHAP values
 - [ ] Implement price trend analysis over time
 - [ ] Add comparison feature for multiple configurations
-- [ ] Deploy on cloud (AWS/GCP/Azure)
+- [x] Deploy on cloud (Render) ✅
 - [ ] Add user authentication for saved predictions
 - [ ] Integrate real-time market data APIs
 
----
+--- -->
 
-## 🤝 Contributing
+<!-- ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -284,7 +293,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
+--- -->
 
 ## 📄 License
 
@@ -294,11 +303,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Alok Choudhary**
 
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- GitHub: [Your GitHub](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [alokchoudhary05](https://github.com/alokchoudhary05)
+- Project: [LaptopGenius.ai](https://github.com/alokchoudhary05/LaptopGenius.ai)
 
 ---
 
@@ -307,5 +315,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 </p>
 
 <p align="center">
-  Made with ❤️ and Python
+  Made with ❤️
 </p>
