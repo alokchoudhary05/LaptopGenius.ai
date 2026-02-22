@@ -71,35 +71,33 @@ In the dynamic laptop market, prices vary significantly based on specifications 
 ```
 📂 LaptopGenius/
 │
-├── 📊 Data Layer
-│   ├── laptop_data.csv          # Raw dataset (1,300+ records)
-│   └── df.pkl                   # Preprocessed feature dataframe
+├── 📊 artifacts/                     # Data & Model Artifacts
+│   ├── laptop_data.csv               # Raw dataset (1,300+ records)
+│   ├── df.pkl                        # Preprocessed feature dataframe
+│   └── pipe.pkl                      # Trained ML pipeline
 │
-├── 🤖 ML Layer
+├── 📓 notebooks/                     # Development & Analysis
 │   ├── laptop-price-predictor.ipynb  # EDA, Feature Engineering, Model Training
-│   └── pipe.pkl                      # Trained ML pipeline (preprocessing + model)
+│   └── main.py                       # Streamlit app (alternative UI)
 │
-├── ⚙️ Backend Layer
-│   ├── app.py                   # FastAPI application
-│   │   ├── /api/options         # GET - Dropdown options
-│   │   ├── /api/predict         # POST - Price prediction
-│   │   └── /api/health          # GET - Health check
-│   └── main.py                  # Streamlit app (alternative UI)
+├── 🎨 frontend/                      # Web Interface
+│   ├── index.html                    # Main HTML page
+│   ├── css/
+│   │   └── style.css                 # Modern styling (CSS3)
+│   └── js/
+│       └── script.js                 # API integration & UI logic
 │
-├── 🎨 Frontend Layer
-│   └── frontend/
-│       ├── index.html           # Main HTML page
-│       ├── css/
-│       │   └── style.css        # Modern styling (CSS3)
-│       └── js/
-│           └── script.js        # API integration & UI logic
+├── ⚙️ app.py                         # FastAPI Backend
+│   ├── /api/options                  # GET - Dropdown options
+│   ├── /api/predict                  # POST - Price prediction
+│   └── /api/health                   # GET - Health check
 │
 ├── 📦 Configuration
-│   ├── requirements.txt         # Python dependencies
-│   └── myenv/                   # Virtual environment
+│   ├── requirements.txt              # Python dependencies
+│   ├── Procfile                      # Render deployment
+│   └── runtime.txt                   # Python version
 │
-└── 📄 Documentation
-    └── README.md                # Project documentation
+└── 📄 README.md                      # Project documentation
 ```
 
 ---
